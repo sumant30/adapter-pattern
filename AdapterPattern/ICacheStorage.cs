@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace AdapterPattern
 {
-    class Program
+    public interface ICacheStorage
     {
-        static void Main(string[] args)
-        {
-        }
+        void Remove(string key);
+        void Store(string key, object data);
+        T Retrieve<T>(string key);
     }
 }
